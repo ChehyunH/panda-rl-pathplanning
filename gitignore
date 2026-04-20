@@ -1,0 +1,47 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+.Python
+*.egg-info/
+dist/
+build/
+.eggs/
+*.egg
+
+# Virtual environments
+.venv/
+venv/
+env/
+ENV/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Jupyter
+.ipynb_checkpoints/
+*.ipynb
+
+# Results / large binaries (keep structure, ignore content)
+results/models/*.zip
+results/models/checkpoints/
+results/logs/*.csv
+results/logs/*.json
+results/plots/*.png
+results/plots/*.pdf
+
+# Keep directory structure
+!results/models/.gitkeep
+!results/logs/.gitkeep
+!results/plots/.gitkeep
+
+# PyBullet cache
+*.bullet
+
+# OS
+.DS_Store
+Thumbs.db

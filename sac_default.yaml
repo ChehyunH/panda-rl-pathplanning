@@ -1,0 +1,31 @@
+# configs/sac_default.yaml
+# ─────────────────────────────────────────────
+# Default hyper-parameters for SAC training
+# on the Franka Panda Reach task.
+# ─────────────────────────────────────────────
+
+# Training
+timesteps: 10_000_000
+n_envs: 8
+seed: 42
+
+# SAC hyper-parameters
+lr: 0.0002
+batch_size: 512
+buffer_size: 1_000_000
+tau: 0.005                    # soft-update coefficient
+gamma: 0.99                   # discount factor
+train_freq: 1
+gradient_steps: 1
+ent_coef: "auto"              # automatic entropy tuning
+
+# Environment
+action_scale: 0.03
+max_steps: 200
+success_threshold: 0.005      # 5 mm
+
+# Checkpointing
+model_name: "sac_panda"
+checkpoint_freq: 100_000      # steps between saves
+eval_freq: 50_000
+eval_episodes: 20
